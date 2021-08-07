@@ -30,7 +30,7 @@
   left: 50%;
   top: 20%;
   transform: translate(-50%, 0);
-  border-radius: 100% / 60% 60% 120% 120%;
+  border-radius: 100% / 50% 50% 120% 120%;
   border: 0.5vmin solid;
   border-bottom-width: 0.85vmin;
   border-top-width: 0.33vmin;
@@ -75,7 +75,8 @@
   border-radius: 100% / 100% 60% 20% 20%;
   overflow: hidden;
   transform: rotate(-4deg);
-  box-shadow: 0 -0.125vmin;
+  box-shadow: 0 -0.125vmin, /* eyebrows */ 0 -2vmin 0 1vmin var(--skin),
+    -0.25vmin -6vmin 0 -0.5vmin;
 }
 
 .eye + .eye {
@@ -99,4 +100,25 @@
 
 .eye + .eye .pupil {
   transform: scaleX(-1);
+}
+
+.nose {
+  width: 20%;
+  height: 12%;
+  border-radius: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 0.5vmin -0.5vmin;
+}
+
+.neck {
+  background: var(--skin);
+  width: 20%;
+  height: 20%;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%);
+  border: 0.5vmin solid;
+  border-bottom: 0;
 }
