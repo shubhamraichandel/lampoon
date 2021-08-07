@@ -1,0 +1,102 @@
+.cartoon {
+  --skin: #fca;
+  --line: #222;
+  --iris: #69c;
+  height: 80vmin;
+  width: 80vmin;
+  background: #f001;
+  background-image: repeating-linear-gradient(#0000 0 9.5%, #0002 10%),
+    repeating-linear-gradient(to left, #0000 0 9.5%, #0002 10%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--line);
+}
+
+.cartoon div,
+.cartoon div.ha,
+.cartoon div.hb {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.face {
+  width: 45%;
+  height: 60%;
+  background: var(--skin);
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, 0);
+  border-radius: 100% / 60% 60% 120% 120%;
+  border: 0.5vmin solid;
+  border-bottom-width: 0.85vmin;
+  border-top-width: 0.33vmin;
+}
+
+.mouth {
+  width: 60%;
+  height: 15%;
+  border-radius: 100%;
+  box-shadow: -0.5vmin 1.4vmin 0 -1vmin;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%) rotate(5deg);
+}
+
+.ear {
+  width: 15%;
+  height: 25%;
+  background: var(--skin);
+  border: 0.5vmin solid;
+  border-radius: 100% / 50% 50% 20% 100%;
+  box-shadow: -0.25vmin -0.25vmin;
+  top: 42%;
+  left: 20%;
+  transform: rotate(-15deg);
+}
+
+.ear + .ear {
+  left: auto;
+  right: 21%;
+  transform: scaleX(-1) rotate(-17deg);
+}
+
+.eye {
+  width: 30%;
+  height: 30%;
+  background: #fff;
+  top: 30%;
+  left: 12%;
+  border: 0.5vmin solid;
+  border-right-width: 0.33vmin;
+  border-radius: 100% / 100% 60% 20% 20%;
+  overflow: hidden;
+  transform: rotate(-4deg);
+  box-shadow: 0 -0.125vmin;
+}
+
+.eye + .eye {
+  left: auto;
+  right: 12%;
+  transform: scaleX(-1) rotate(-4deg);
+}
+
+.pupil {
+  width: 7vmin;
+  height: 7vmin;
+  left: 15%;
+  top: 40%;
+  background: var(--iris);
+  border-radius: 50%;
+  border: 0.33vmin solid;
+  background-image: radial-gradient(var(--line) 35%, #0000 0),
+    radial-gradient(circle at 30% 32%, #fff 7%, #0000 0),
+    radial-gradient(circle at 40% 27%, #fff 4%, #0000 0);
+}
+
+.eye + .eye .pupil {
+  transform: scaleX(-1);
+}
