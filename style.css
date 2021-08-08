@@ -131,9 +131,10 @@ Production: https://lampoon.vercel.app
   border-bottom: 0;
 }
 
-.hair-top {
-  width: 15%;
-  height: 15%;
+.hair-top,
+.hair-back {
+  width: 18%;
+  height: 18%;
   background: var(--hair);
   border-radius: 50%;
   left: 50%;
@@ -142,5 +143,14 @@ Production: https://lampoon.vercel.app
   filter: drop-shadow(0 0.75vmin var(--line));
   color: var(--hair);
   box-shadow: -6vmin 1vmin 0 -2vmin, -14vmin 2vmin 0 -1vmin,
-    7vmin 1.25vmin 0 -1.75vmin, 15vmin 2.25vmin 0 -1.25vmin;
+    7vmin 1.25vmin 0 -1.75vmin, 15vmin 2.25vmin 0 -1.75vmin;
+}
+
+.hair-back {
+  filter: drop-shadow(-0.5vmin 0 var(--line)) drop-shadow(0.5vmin 0 var(--line))
+    drop-shadow(0vmin -0.5vmin var(--line));
+  box-shadow: -15vmin 18vmin, -17vmin 10vmin 0 2vmin, -18vmin 1vmin 0 2vmin,
+    -12vmin -1vmin 0 2vmin, 1vmin -6vmin 0 4vmin, 8vmin -7vmin 0 -2vmin,
+    12vmin -3vmin 0 2vmin, 20vmin 5vmin, 18vmin 14vmin 0 1vmin,
+    16vmin 20vmin 0 -1vmin;
 }
