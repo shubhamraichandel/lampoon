@@ -4,20 +4,26 @@ GitHub : https://github.com/shubhamraichandel
 Production: https://lampoon.vercel.app
 */
 
+html,
+body {
+  overflow: hidden;
+}
+
 .cartoon {
   --skin: #fca;
   --hair: #963;
   --line: #222;
   --iris: #69c;
+  --shirt: #fff;
   height: 80vmin;
   width: 80vmin;
   background: #f001;
   background-image: repeating-linear-gradient(#0000 0 9.5%, #0002 10%),
     repeating-linear-gradient(to left, #0000 0 9.5%, #0002 10%);
   position: absolute;
-  top: 50%;
+  bottom: 0%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   color: var(--line);
 }
 
@@ -129,6 +135,7 @@ Production: https://lampoon.vercel.app
   transform: translate(-50%);
   border: 0.5vmin solid;
   border-bottom: 0;
+  clip-path: polygon(0 0, 0 100%, 100% 94%, 100% 0);
 }
 
 .hair-top,
@@ -152,5 +159,23 @@ Production: https://lampoon.vercel.app
   box-shadow: -15vmin 18vmin, -17vmin 10vmin 0 2vmin, -18vmin 1vmin 0 2vmin,
     -12vmin -1vmin 0 2vmin, 1vmin -6vmin 0 4vmin, 8vmin -7vmin 0 -2vmin,
     12vmin -3vmin 0 2vmin, 20vmin 5vmin, 18vmin 14vmin 0 1vmin,
-    16vmin 20vmin 0 -1vmin;
+    16vmin 19vmin 0 -1vmin;
+}
+
+.body {
+  height: 40%;
+  width: 80%;
+  background: var(--shirt);
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 0.5vmin solid;
+  border-radius: 100%/ 75% 80%;
+  box-shadow: 0vmin -0.5vmin 0 0 0.25vmin;
+  background-image: radial-gradient(
+    circle at 50% -20%,
+    var(--skin) 27%,
+    var(--line) 0 29%,
+    transparent 0
+  );
 }
